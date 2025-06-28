@@ -1,0 +1,47 @@
+/* larger.css – Wide Screens 768px+ */
+@media screen and (min-width: 768px) {
+  header, footer {
+    text-align: left;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .hero .cta {
+    bottom: 30px;
+    right: 30px;
+  }
+
+  .info-panels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .business-spotlight {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .footer-section {
+    flex: 1;
+    text-align: center;
+  }
+
+  .footer-section.left {
+    text-align: left;
+  }
+
+  .footer-section.right {
+    text-align: right;
+  }
+}

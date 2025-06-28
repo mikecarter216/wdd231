@@ -1,0 +1,87 @@
+/* small.css – Mobile First (320px and up) */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f8f8f8;
+  color: #333;
+  line-height: 1.5;
+}
+
+header, footer {
+  background-color: #006699;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.cta {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #ffcc00;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-weight: bold;
+}
+
+.info-panels, .business-spotlight {
+  padding: 1rem;
+}
+
+.panel, .business-card {
+  background: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid #006699;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-section {
+  margin-bottom: 1rem;
+}
+
+.socials img {
+  width: 30px;
+  margin: 0 0.5rem;
+}
