@@ -1,0 +1,423 @@
+/* styles/index.css */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;/* styles/index.css */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #222;
+  color: white;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.branding img {
+  height: 40px;
+}
+.branding span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: auto; /* Pushes logo to the right */
+}
+
+header img {
+  height: 40px;
+  margin-right: auto;
+}
+
+#menu {
+  display: none;
+}
+
+nav {
+  background-color: #444;
+}
+
+nav ul.navigation {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+nav ul.navigation li a {
+  display: block;
+  padding: 1rem 2rem;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+nav ul.navigation li a:hover,
+nav ul.navigation li a.active {
+  background-color: #666;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: white;
+}
+
+main h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+section {
+  background: #f0f0f0;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+section h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #a5dde1;
+  padding: 0.5rem 1rem;
+  border: 2px solid #4389a1;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.filters button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.filters button:hover {
+  background-color: #bbb;
+}
+
+.courses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.course {
+  background-color: #e0e0e0;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: bold;
+  width: 100%;
+  max-width: 250px;
+}
+
+section p {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.socials {
+  margin-bottom: 1rem;
+}
+
+.socials a {
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+
+.socials img {
+  width: 30px;
+  height: 30px;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* Responsive Tweak for Larger Screens */
+@media (min-width: 900px) {
+  nav ul.navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  main {
+    grid-template-columns: 2fr 1fr;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .filters {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .courses {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .course {
+    max-width: none;
+    width: 120px;
+  }
+
+  header {
+    flex-direction: row-reverse;
+  }
+
+  nav ul.navigation li a {
+    padding: 1rem 2rem;
+  }
+}
+
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 1rem 2rem;
+  background-color: #222;
+  color: white;
+}
+
+section h2 {
+  display: block;
+  background-color: #a5dde1; /* dark background */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: 2px solid #4389a1; /* or use #444 for subtle contrast */
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+header img {
+  height: 40px;
+}
+
+header span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#menu {
+  display: none;
+}
+
+nav {
+  background-color: #444;
+}
+
+nav ul.navigation {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul.navigation li a {
+  display: block;
+  padding: 1rem 2rem;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+nav ul.navigation li a:hover,
+nav ul.navigation li a.active {
+  background-color: #666;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  background-color: white;
+}
+
+main h1 {
+  grid-column: span 2;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+section {
+  background: #f0f0f0;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+section h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #222;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.filters {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.filters button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+  font-weight: bold;
+}
+
+.filters button:hover {
+  background-color: #bbb;
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-content: center;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 1rem;
+}
+
+.course {
+  background-color: #e0e0e0;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+section p {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.socials {
+  margin-bottom: 1rem;
+}
+
+.socials a {
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+
+.socials img {
+  width: 30px;
+  height: 30px;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* Responsive Tweak for Tablet and Below */
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  header,
+  nav ul.navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul.navigation {
+    flex-direction: column;
+  }
+
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .courses {
+    grid-template-columns: 1fr;
+  }
+}

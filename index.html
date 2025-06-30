@@ -6,19 +6,20 @@
   <meta name="description" content="Michael Akpan's WDD231 Home Page" />
   <meta name="author" content="Michael Akpan" />
   <title>Michael Akpan | WDD231</title>
-  <link rel="stylesheet" href="styles/index-small.css" />
   <link rel="stylesheet" href="styles/index.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/date.js" defer></script>
 </head>
 <body>
-  <header>
-    <img src="images/logo.png" alt="Site Logo" />
+<header>
+  <div class="branding">
+    <img src="images/logo.png" alt="Logo">
     <span>Michael Akpan</span>
-    <button id="menu" aria-label="Toggle Menu">&#10005;</button>
-  </header>
-
+  </div>
+  <button id="menu">&#9776;</button> <!-- Optional: Mobile menu -->
+</header>
   <nav>
     <ul class="navigation">
       <li><a href="index.html" class="active">Home</a></li>
