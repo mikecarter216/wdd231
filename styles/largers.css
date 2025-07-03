@@ -206,3 +206,27 @@ footer p {
     line-height: 24.4px;
     color: var(--white);
 }
+
+.certificate-card {
+  border: 2px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #f9f9f9;
+  transition: transform 0.2s;
+}
+
+.certificate-card:hover {
+  transform: scale(1.02);
+}
+
+.certificate-card.completed {
+  border-color: #28a745;
+  background-color: #e6f4ea;
+}
+
+.badge {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #28a745;
+}
