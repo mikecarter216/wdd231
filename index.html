@@ -1,74 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Michael Akpan's WDD231 Home Page" />
-  <meta name="author" content="Michael Akpan" />
-  <title>Michael Akpan | WDD231</title>
-<link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 900px)">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <script src="scripts/navigation.js" defer></script>
-  <script src="scripts/date.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD 231 – Course Home Page by Michael Akpan.">
+  <meta name="author" content="Michael Akpan">
+  <title>WDD 231 - Michael Akpan</title>
+  <link rel="stylesheet" href="./styles/small.css">
+  <link rel="stylesheet" href="./styles/largers.css">
+  <script src="./scripts/date.js" defer></script>
+  <script src="./scripts/hamburger.js" defer></script>
+  <script src="./scripts/certificate.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-  <div class="branding">
-    <img src="images/logo.png" alt="Logo">
-    <span>Michael Akpan</span>
-  </div>
-  <button id="menu">&#9776;</button>
-</header>
-  <nav>
-    <ul class="navigation">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="chamber.html">Chamber Project</a></li>
-      <li><a href="#">Final Project</a></li>
-    </ul>
-  </nav>
+  <header>
+    <div class="top-header">
+      <img src="./images/logo.png" alt="Michael Akpan Logo">
+      <h1>Michael Akpan</h1>
+      <button id="hamburger-menu" aria-label="Toggle navigation">
+        <span class="hamburger-icon">&#9776;</span>
+      </button>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chamber.html">Chamber</a></li>
+        <li><a href="https://linkedin.com/in/michael-akpan-326b132b9" target="_blank">LinkedIn</a></li>
+        <li><a href="https://x.com/MichaelAkp680" target="_blank">Twitter</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
-    <h1>Home</h1>
+    <h2>Home</h2>
 
-    <section>
-  <h2>About Me</h2>
-  <p>
-    Hi, I'm Michael Akpan from Akwa Ibom State Nigeria a passionate web developer in training with a strong interest in building responsive and user-friendly websites. I'm currently studying software development and honing my skills in HTML, CSS, JavaScript, and modern web technologies. I love solving problems, exploring creative ideas, and continuously learning to improve my craft. My goal is to create websites that are not only functional but also visually appealing and accessible to everyone.
-  </p>
-</section>
-
-    <section>
-      <h2>Student Photo</h2>
-      <img src="images/carter.jpg" alt="Michael Akpan" loading="lazy" />
+    <section class="course-work-grid">
+      <div class="card about-me">
+        <div class="card-heading">
+          <h2>Course Work</h2>
+        </div>
+        <div class="card-content">
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React JS</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card web-resources">
+        <div class="card-heading">
+          <h2>Student Picture</h2>
+        </div>
+        <div class="card-content">
+          <img src="./images/carter.jpg" alt="Michael Akpan Profile Photo" class="flag">
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Web Certificate Courses</h2>
-      <div class="filters">
-        <button>All</button>
-        <button>CSE</button>
-        <button>WDD</button>
+    <section class="card certificates">
+      <div class="card-heading">
+        <h2>Web and Computer Programming Certificate</h2>
       </div>
-      <div class="courses">
-        <div class="course">WDD 130</div>
-        <div class="course">WDD 131</div>
-        <div class="course">WDD 231</div>
+      <div class="certificate-buttons">
+        <button type="button" class="all-btn">All</button>
+        <button type="button" class="cse-btn">CSE</button>
+        <button type="button" class="wdd-btn">WDD</button>
+      </div>
+      <div class="certificate-grid"></div>
+    </section>
   </main>
 
   <footer>
-    <p>The total credits for course listed above is 6</p>
-    <div class="socials">
-      <a href="https://linkedin.com/in/michael-akpan-326b132b9" target="_blank">
-        <img src="images/linkedin.png" alt="LinkedIn" />
-      </a>
-      <a href="https://x.com/MichaelAkp680?t=LI63XaMaDXZcAMt631XgNQ&s=09" target="_blank">
-        <img src="images/twitter.png" alt="GitHub" />
-      </a>
-      <a href="https://www.facebook.com/michael.akpan.33483">
-        <img src="images/facebook.png" alt="Other" />
-      </a>
-    </div>
-    <p>&copy; <span id="year"></span> • Michael Akpan • Akwa Ibom, Nigeria</p>
+    <p>&copy; <span id="year"></span> &bull; Michael Akpan &bull; Akwa Ibom, Nigeria</p>
     <p id="lastModified">Last Modification: </p>
   </footer>
 </body>

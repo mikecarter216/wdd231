@@ -21,7 +21,7 @@ header {
 header span {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-right: auto; /* Pushes logo to the right */
+  margin-right: auto;
 }
 
 header img {
