@@ -2,7 +2,7 @@
   "members": [
     {
       "name": "Uyo Tech",
-      "address": "10 Software Ave, Uyo",
+      "address": "10 double lane, Uyo",
       "phone": "+234-801-234-5678",
       "website": "https://uyotech.com",
       "icon": "uyotech.png",
@@ -10,7 +10,7 @@
     },
     {
       "name": "Akwa Graphics",
-      "address": "21 Art Blvd, Ikot Ekpene",
+      "address": "21 umo obot, Ikot Ekpene",
       "phone": "+234-803-456-7890",
       "website": "https://akwasigns.com",
       "icon": "akwa.png",
@@ -23,6 +23,38 @@
       "website": "https://ikotmart.com",
       "icon": "ikotmart.png",
       "membership": 1
+    },
+    {
+      "name": "Royal Paints",
+      "address": "9 kings Lane, Uyo",
+      "phone": "+234-802-987-1234",
+      "website": "https://royalpaints.ng",
+      "icon": "royalpaints.png",
+      "membership": 2
+    },
+    {
+      "name": "Green Farms",
+      "address": "Km 4 Ikono Road, Ikot Ekpene",
+      "phone": "+234-808-321-7654",
+      "website": "https://greenfarms.africa",
+      "icon": "greenfarms.png",
+      "membership": 1
+    },
+    {
+      "name": "StartEdge Solutions",
+      "address": "45 Innovation Street, Uyo",
+      "phone": "+234-805-999-2233",
+      "website": "https://startedge.io",
+      "icon": "startedge.png",
+      "membership": 3
+    },
+    {
+      "name": "Mega Prints",
+      "address": "23 umuahia road, Ikot Ekpene",
+      "phone": "+234-809-555-9876",
+      "website": "https://megaprints.com",
+      "icon": "megaprints.png",
+      "membership": 2
     }
   ]
 }

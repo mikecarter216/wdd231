@@ -1,59 +1,122 @@
-@media screen and (max-width: 450px) {
+/* Mobile-First CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background: #f5f5f5;
+  color: #333;
+}
 
-    :root {
-        --white: #fff;
-        --green: #095733;
-        --green: #05704c;
-        --black: #000;
-        --ash: #aba7a7;
-    }
+header {
+  background: #941e1e;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
 
-    .hero-section {
-        width: 100%;
-        height: fit-content;
-        position: relative;
-    }
-    .hero-section .place-title {
-        padding: 20px;
-    }
-    .hero-section .data-box {
-        padding: 20px;
-        padding-top: 20px;
-        box-shadow: unset;
-    }
-    .hero-section .data {
-        position: unset;
-    }
-    .hero-section .weather {
-        position: unset;
-    }
-    .hero-section .data-header {
-        position: unset;
-    }
-    .hero-section .weather-icon {
-        display: inline-block;
-    }
-    .hero-section .weather h4::after {
-        display: none; 
-    }
+.logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
 
-    footer {
-        background-color: rgb(27, 19, 72);
-        padding: 20px;
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        justify-content: center;
-        font-style: bold;
-    }
-    footer p {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 24.4px;
-        color: rgb(247, 252, 247);
-        background-color: rgb(7, 24, 79);
-        font-style: bold;
-    }
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  background: #c03232;
+}
+
+nav ul li a,
+nav ul li button {
+  color: white;
+  text-align: center;
+  padding: 0.75rem;
+  text-decoration: none;
+  display: block;
+  border: none;
+  background: transparent;
+}
+
+nav ul li a.active {
+  background: #7a1616;
+}
+
+main {
+  padding: 1rem;
+}
+
+.view-toggle {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.view-toggle button {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: #eee;
+}
+
+#directory {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer .footer-section {
+  margin-bottom: 1rem;
+}
+
+footer img {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.5rem;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode nav ul {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
 }

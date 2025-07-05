@@ -6,9 +6,13 @@
   <title>Directory | Ikot Ekpene Chamber</title>
   <meta name="description" content="Directory of businesses in Ikot Ekpene Chamber of Commerce">
   <meta name="author" content="Michael Akpan">
-  <link rel="stylesheet" href="styles/small.css" >
+  <meta property="og:title" content="Ikot Ekpene Chamber Directory">
+  <meta property="og:description" content="Business directory for the Ikot Ekpene Chamber of Commerce">
+  <meta property="og:image" content="images/preview.png">
+ <meta property="og:url" content="https://michaelakpan216.github.io/chamber/directory.html">
+ <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/chamber.css">
-  <script src="scripts/directory.js" defer></script>
 </head>
 <body>
   <header>
@@ -19,7 +23,7 @@
         <li><a href="#" class="active">Directory</a></li>
         <li><a href="#">Join</a></li>
         <li><a href="#">Discover</a></li>
-        <li><button id="mode-toggle">🌓</button></li>
+        <li><button id="mode-toggle" aria-label="Toggle dark mode">🌓</button></li>
       </ul>
     </nav>
   </header>
@@ -53,5 +57,7 @@
       <p>Last Modification: <span id="lastModified"></span></p>
     </div>
   </footer>
+
+  <script src="scripts/directory.js" defer></script>
 </body>
 </html>
