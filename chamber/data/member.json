@@ -1,0 +1,31 @@
+{
+  "members": [
+    {
+      "name": "Business One",
+      "image": "images/business1.jpg",
+      "tagline": "Your local cafe",
+      "email": "info@biz1.com",
+      "phone": "123-456-7890",
+      "website": "https://biz1.com",
+      "membership": "Gold"
+    },
+    {
+      "name": "Green Farms",
+      "image": "images/greenfarms.png",
+      "tagline": "Organic Solutions",
+      "email": "info@greenfarms.com",
+      "phone": "888-123-4567",
+      "website": "https://greenfarms.com",
+      "membership": "Silver"
+    },
+    {
+      "name": "Business 2k",
+      "image": "images/business2.jpg",
+      "tagline": "Web & Mobile Services",
+      "email": "spark@digital.com",
+      "phone": "321-987-1234",
+      "website": "https://digitalspark.com",
+      "membership": "Gold"
+    }
+  ]
+}

@@ -1,8 +1,10 @@
+// directory.js (now inlined in HTML, but here's the separate file version)
+
 const directory = document.getElementById("directory");
 const gridBtn = document.getElementById("gridBtn");
 const listBtn = document.getElementById("listBtn");
+const modeToggle = document.getElementById("mode-toggle");
 
-// Toggle view buttons
 gridBtn.addEventListener("click", () => {
   directory.classList.add("grid-view");
   directory.classList.remove("list-view");
@@ -13,7 +15,10 @@ listBtn.addEventListener("click", () => {
   directory.classList.remove("grid-view");
 });
 
-// Fetch member data
+modeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
 async function fetchMembers() {
   try {
     const response = await fetch("data/members.json");
@@ -28,31 +33,28 @@ async function fetchMembers() {
   }
 }
 
-// Render members
 function displayMembers(members) {
-  directory.innerHTML = ""; // Clear existing
+  directory.innerHTML = "";
 
   members.forEach(member => {
-    const card = document.createElement("section");
-    card.classList.add("member-card");
+    const section = document.createElement("section");
+    section.classList.add("card", "member");
 
-    // Handle icon path: if it's a full URL, use it; otherwise assume local file
     const iconPath = member.icon.startsWith("http") ? member.icon : `images/${member.icon}`;
 
-    card.innerHTML = `
+    section.innerHTML = `
       <img src="${iconPath}" alt="${member.name} logo" loading="lazy">
       <h3>${member.name}</h3>
-      <p>${member.address}</p>
-      <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank">${member.website}</a>
+      <p><strong>Address:</strong> ${member.address}</p>
+      <p><strong>Phone:</strong> ${member.phone}</p>
+      <a href="${member.website}" target="_blank" rel="noopener noreferrer">${member.website}</a>
     `;
 
-    directory.appendChild(card);
+    directory.appendChild(section);
   });
 }
 
 fetchMembers();
 
-// Footer year and last modified
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;

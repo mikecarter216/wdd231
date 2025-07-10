@@ -1,4 +1,4 @@
-/* Large screen styles (Desktop) */
+/* chamber.css - Large Screen Styles */
 @media screen and (min-width: 768px) {
   nav ul {
     flex-direction: row;
@@ -13,6 +13,22 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+  }
+
+  .spotlight-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .info-panels {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .info-panels .panel {
+    flex: 1;
+    min-width: 280px;
   }
 
   #directory.grid-view {
