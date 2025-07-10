@@ -12,6 +12,7 @@ const grid = document.querySelector('.certificate-grid');
 const allBtn = document.querySelector('.all-btn');
 const cseBtn = document.querySelector('.cse-btn');
 const wddBtn = document.querySelector('.wdd-btn');
+const creditDisplay = document.getElementById('creditTotal'); // NEW
 
 // Render courses
 function renderCourses(filteredCourses) {
@@ -28,15 +29,18 @@ function renderCourses(filteredCourses) {
       <p>Credits: ${course.credits}</p>
       ${course.completed ? '<p class="badge">✓ Completed</p>' : ''}
     `;
-
     grid.appendChild(card);
   });
+
+  // Calculate total credits using reduce()
+  const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
+  creditDisplay.textContent = totalCredits;
 }
 
-// Filter handlers
+// Event listeners for filter buttons
 allBtn.addEventListener('click', () => renderCourses(courses));
 cseBtn.addEventListener('click', () => renderCourses(courses.filter(course => course.type === 'CSE')));
 wddBtn.addEventListener('click', () => renderCourses(courses.filter(course => course.type === 'WDD')));
 
-// Initial display
+// Initial load
 renderCourses(courses);

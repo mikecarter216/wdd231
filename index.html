@@ -7,7 +7,7 @@
   <meta name="author" content="Michael Akpan">
   <title>WDD 231 - Michael Akpan</title>
   <link rel="stylesheet" href="./styles/index.css">
-  <link rel="stylesheet" href="./styles/largers.css">
+  <link rel="stylesheet" href="./styles/larger.css">
   <script src="./scripts/date.js" defer></script>
   <script src="./scripts/hamburger.js" defer></script>
   <script src="./scripts/certificate.js" defer></script>
@@ -25,9 +25,9 @@
       </button>
     </div>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="chamber.html">Chamber</a></li>
+      <ul class="navigation">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="chamber/chamber.html">Chamber</a></li>
         <li><a href="https://linkedin.com/in/michael-akpan-326b132b9" target="_blank">LinkedIn</a></li>
         <li><a href="https://x.com/MichaelAkp680" target="_blank">Twitter</a></li>
       </ul>
@@ -43,9 +43,9 @@
           <h2>About me</h2>
         </div>
         <div class="card-content">
-           <p>
-        Hi, I'm Michael Akpan from Akwa Ibom State Nigeria, a passionate web developer in training with a strong interest in building responsive and user-friendly websites. I'm currently studying software development and honing my skills in HTML, CSS, JavaScript, and modern web technologies. I love solving problems, exploring creative ideas, and continuously learning to improve my craft. My goal is to create websites that are not only functional but also visually appealing and accessible to everyone.
-      </p>
+          <p>
+            Hi, I'm Michael Akpan from Akwa Ibom State Nigeria, a passionate web developer in training with a strong interest in building responsive and user-friendly websites. I'm currently studying software development and honing my skills in HTML, CSS, JavaScript, and modern web technologies. I love solving problems, exploring creative ideas, and continuously learning to improve my craft. My goal is to create websites that are not only functional but also visually appealing and accessible to everyone.
+          </p>
         </div>
       </div>
       <div class="card web-resources">
@@ -67,12 +67,13 @@
         <button type="button" class="cse-btn">CSE</button>
         <button type="button" class="wdd-btn">WDD</button>
       </div>
+      <p class="credit-count">Total Credits: <span id="creditTotal">0</span></p>
       <div class="certificate-grid"></div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> &bull; Michael Akpan &bull; Akwa Ibom, Nigeria</p>
+    <p>&copy; <span id="year"></span> • Michael Akpan • Akwa Ibom, Nigeria</p>
     <p id="lastModified">Last Modification: </p>
   </footer>
 </body>
