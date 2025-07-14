@@ -112,3 +112,29 @@
     }
   }
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: -3rem;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+  padding: 0.5rem;
+  border:1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
