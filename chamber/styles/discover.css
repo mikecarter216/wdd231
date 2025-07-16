@@ -1,0 +1,185 @@
+/* General Typography & Layout */
+body {
+  font-family: Roboto, sans-serif;
+}
+h1 {
+  font-size: 2.5rem;
+  padding: 1rem;
+  background-color: #333;
+  text-align: center;
+  font-family: 'Acme', Arial, sans-serif;
+  color: #fff;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+  color: darkgreen;
+}
+section {
+  margin: 1rem auto;
+  max-width: 960px;
+  padding: 0.5rem;
+}
+
+.visit-message {
+  background-color: #eee;
+  border-left: 4px solid #008080;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Grid Area Setup */
+.discover-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+/* Default layout for mobile (stacked) */
+@media (max-width: 640px) {
+  .discover-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "card5"
+      "card6"
+      "card7"
+      "card8";
+  }
+}
+
+/* Medium screens */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+  }
+
+  /* Image hover effect only on large screens */
+  .discover-grid img:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    transform: scale(1.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+}
+
+/* Card styling */
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #005f5f;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Effects and utility classes */
+.stdlf {
+  font-weight: 700;
+  border-bottom: 1px solid #777;
+  margin-bottom: 1rem;
+}
+.hover:hover {
+  box-shadow: 0 0 50px #333;
+}
+.rocorn {
+  border-radius: 15px 150px;
+}
+.opac {
+  opacity: 0.5;
+}
+.blur {
+  filter: blur(4px);
+}
+.gray {
+  filter: blur(1px) grayscale(50%);
+}
+.object {
+  width: 100%;
+  height: 75px;
+  object-fit: cover;
+}
+.contrast {
+  filter: contrast(50%);
+}
+.saturate {
+  filter: saturate(50%);
+}
+.shape-outside {
+  border-radius: 100px;
+  width: 35%;
+  margin: 0 3em 0.5em 0;
+  float: left;
+  shape-outside: circle();
+}
+.mbm-difference {
+  mix-blend-mode: difference;
+}
+.mbm-hard-light {
+  mix-blend-mode: hard-light;
+}
+.transform {
+  transform: scaleX(-1);
+}
+.turn {
+  rotate: 0.05turn;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 1px;
+}
