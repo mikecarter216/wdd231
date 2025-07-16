@@ -1,0 +1,52 @@
+{
+  "discover": [
+    {
+      "title": "Ikot Ekpene Plaza",
+      "image": "images/plaza.png",
+      "address": "Ikot Ekpene Plaza, Akwa Ibom State, Nigeria",
+      "description": "A bustling market hub and social center known for its unique raffia products."
+    },
+    {
+      "title": "Green Park",
+      "image": "images/greenpark.png",
+      "address": "Green Park, Ikot Ekpene, Akwa Ibom",
+      "description": "A serene park with lush greenery, perfect for family picnics and leisure walks."
+    },
+    {
+      "title": "Raffia City Mall",
+      "image": "images/mall.png",
+      "address": "Raffia City Mall, Ikot Ekpene",
+      "description": "Modern shopping center offering local and international brands."
+    },
+    {
+      "title": "Unity Library",
+      "image": "images/library.png",
+      "address": "Unity Rd, Ikot Ekpene",
+      "description": "A public library with access to books, research materials, and Wi-Fi."
+    },
+    {
+      "title": "Museum of Art",
+      "image": "images/museum.png",
+      "address": "Cultural Ave, Ikot Ekpene",
+      "description": "Preserving local history and heritage through exhibitions and artifacts."
+    },
+    {
+      "title": "Town Hall",
+      "image": "images/townhall.png",
+      "address": "Main Road, Ikot Ekpene",
+      "description": "A venue for community events, business meetings, and social programs."
+    },
+    {
+      "title": "Fitness Trail",
+      "image": "images/fitness.png",
+      "address": "Wellness Loop, Ikot Ekpene",
+      "description": "Outdoor gym and jogging trail to promote health and wellness."
+    },
+    {
+      "title": "Raffia Monument",
+      "image": "images/monument.png",
+      "address": "Monument Circle, Ikot Ekpene",
+      "description": "Iconic sculpture representing the town's raffia weaving heritage."
+    }
+  ]
+}

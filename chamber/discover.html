@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover | Ikot Ekpene Chamber of Commerce</title>
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/chamber.css">
+  <link rel="stylesheet" href="styles/discover.css">
+  <script src="scripts/discover.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Ikot Ekpene <br><span>Chamber of Commerce</span></div>
+    <nav>
+      <ul>
+        <li><a href="chamber.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
+        <li><button id="mode-toggle" aria-label="Toggle dark mode">🌓</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Visit Message -->
+    <aside id="visit-message" class="visit-message"></aside>
+
+    <!-- Page Title -->
+    <h1>Discover Ikot Ekpene</h1>
+
+ <!-- Discover Cards -->
+<section class="discover-grid" id="discoverGrid">
+  <h2 class="section-title">Places to Discover</h2>
+  <!-- Cards will be injected here by discover.js -->
+</section>
+
+  </main>
+
+  <footer>
+    <div class="footer-section left">
+      <p><strong>Ikot Ekpene Chamber of Commerce</strong><br>
+        123 Commerce Blvd, Ikot Ekpene, NG<br>
+        info@ikotekpenecc.org | +234-800-555-0000
+      </p>
+    </div>
+
+    <div class="footer-section center socials">
+      <a href="#"><img src="images/youtube.png" alt="YouTube logo" loading="lazy"></a>
+      <a href="#"><img src="images/twitter.png" alt="Twitter logo" loading="lazy"></a>
+      <a href="#"><img src="images/linkedin.png" alt="LinkedIn logo" loading="lazy"></a>
+    </div>
+
+    <div class="footer-section right">
+      <p>WDD231 Class Project – Michael Akpan</p>
+      <p>&copy; <span id="year"></span> Ikot Ekpene Chamber of Commerce</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+
+</html>
