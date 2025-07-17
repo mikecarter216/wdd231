@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "make": "Mecedes",
+    "model": "benz",
+    "year": 2020,
+    "price": 24000,
+    "image": "images/benz1.png",
+    "mileage": 30000
+  },
+  {
+    "id": 2,
+    "make": "BMW",
+    "model": "clean",
+    "year": 2022,
+    "price": 22000,
+    "image": "images/bmw1.png",
+    "mileage": 12000
+  },
+  {
+    "id": 3,
+    "make": "Benza",
+    "model": "Model 3",
+    "year": 2021,
+    "price": 35000,
+    "image": "images/benz2.png",
+    "mileage": 8000
+  }
+]
