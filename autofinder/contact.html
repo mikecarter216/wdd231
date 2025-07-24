@@ -23,28 +23,43 @@
     </nav>
   </header>
 
-  <main>
-    <h2>Contact Us</h2>
-    <form action="form-response.html" method="get">
-      <label for="name">Full Name:</label>
-      <input type="text" name="name" id="name" required>
+  <section class="max-w-4xl mx-auto p-6 border-t border-gray-300">
+    <h2 class="text-2xl font-semibold border-b-2 border-blue-600 pb-2 mb-4">Contact Us</h2>
+    
+    <div class="space-y-2">
+      <p><strong>Email:</strong> <a href="mailto:michaelakpan216@gmail.com" class="text-blue-600 underline">michaelakpan216@gmail.com</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/mikecarter216" class="text-blue-600 underline" target="_blank">github.com/mikecarter216</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/michael-akpan326b132b9" class="text-blue-600 underline" target="_blank">linkedin.com/in/michael-akpan326b132b9</a></p>
+      <p><strong>Phone/whatsapp:</strong> <a href="tel:+2347039731987" class="text-blue-600 underline">+2347039731987</a></p>
+    </div>
 
-      <label for="email">Email:</label>
-      <input type="email" name="email" id="email" required>
-
-      <label for="interest">Vehicle of Interest:</label>
-      <input type="text" name="interest" id="interest">
-
-      <label for="message">Message:</label>
-      <textarea name="message" id="message" rows="4"></textarea>
-
-      <button type="submit">Submit</button>
+    <form action="https://formspree.io/f/mbloelwo" method="POST" class="mt-6 space-y-4">
+      <div>
+        <label for="name" class="block font-medium">Your Name</label>
+        <input type="text" name="name" id="name" required class="w-full mt-1 p-2 border border-gray-300 rounded" />
+      </div>
+      <div>
+        <label for="email" class="block font-medium">Your Email</label>
+        <input type="email" name="email" id="email" required class="w-full mt-1 p-2 border border-gray-300 rounded" />
+      </div>
+      <div>
+         <label for="interest">Vehicle Interest:</label>
+         <input type="text" name="interest" id="interest">
+      <div>
+        <label for="message" class="block font-medium">Your Message</label>
+        <textarea name="message" id="message" rows="4" required class="w-full mt-1 p-2 border border-gray-300 rounded"></textarea>
+      </div>
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Send Message</button>
     </form>
-  </main>
-
+  </section>
   <footer>
-    <p>&copy; 2025 Michael Akpan | <a href="attributions.html">Attributions</a> | <a href="https://www.loom.com/share/e708c8c782a74349990b8a2176283ece?sid=68e6ba22-9dce-4a09-bf5a-bb4427daea39" target="_blank">Video Demo</a></p>
-  </footer>
+  <p>
+    &copy; 2025 Michael Akpan |
+    <a href="attributions.html">Attributions</a> |
+    <a href="https://www.loom.com/share/e708c8c782a74349990b8a2176283ece?sid=68e6ba22-9dce-4a09-bf5a-bb4427daea39" target="_blank">Video Demo</a>
+  </p>
+  <p>Last Updated: <span id="lastModified"></span></p>
+</footer>
 
   <script type="module" src="js/main.js"></script>
 </body>

@@ -1,3 +1,5 @@
-document.getElementById('menu-toggle').addEventListener('click', () => {
-  document.getElementById('nav-menu').classList.toggle('open');
+// Set the last modified date in the footer
+document.addEventListener("DOMContentLoaded", () => {
+  const lastModified = document.lastModified;
+  document.getElementById("lastModified").textContent = lastModified;
 });
