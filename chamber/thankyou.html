@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="./styles/small.css">
   <link rel="stylesheet" href="./styles/chamber.css">
   <script>
-    // Load submitted data from URL
     window.addEventListener("DOMContentLoaded", () => {
       const params = new URLSearchParams(window.location.search);
       document.getElementById("firstName").textContent = params.get("fname") || "";
@@ -19,12 +18,14 @@
     });
   </script>
 </head>
+
 <body>
   <header>
     <div class="logo">
-      Ikot Ekpene <br><span>Chamber of Commerce</span>
+      Ikot Ekpene<br><span>Chamber of Commerce</span>
     </div>
-    <nav>
+    <button id="hamburger" aria-label="Toggle Menu">☰</button>
+    <nav id="nav-menu">
       <ul>
         <li><a href="chamber.html">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
@@ -35,7 +36,7 @@
   </header>
 
   <main>
-    <section class="thankyou">
+    <section class="thankyou" style="padding: 1rem;">
       <h1>Thank You for Applying!</h1>
       <p>We have received your application. Here's a summary of the information you submitted:</p>
       <ul>
@@ -55,11 +56,17 @@
       123 Commerce Blvd, Ikot Ekpene, NG<br>
       info@ikotekpenecc.org | +234-800-555-0000</p>
     </div>
-    <div class="footer-section center socials">
-      <a href="#"><img src="images/youtube.png" alt="YouTube logo" loading="lazy"></a>
-      <a href="#"><img src="images/twitter.png" alt="Twitter logo" loading="lazy"></a>
-      <a href="#"><img src="images/linkedin.png" alt="LinkedIn logo" loading="lazy"></a>
-    </div>
+     <div class="footer-section center socials">
+  <a href="https://www.youtube.com" aria-label="YouTube">
+    <img src="images/youtube.png" alt="YouTube" loading="lazy">
+  </a>
+  <a href="https://www.twitter.com" aria-label="Twitter">
+    <img src="images/twitter.png" alt="Twitter" loading="lazy">
+  </a>
+  <a href="https://www.linkedin.com" aria-label="LinkedIn">
+    <img src="images/linkedin.png" alt="LinkedIn" loading="lazy">
+  </a>
+</div>
     <div class="footer-section right">
       <p>WDD231 Class Project – Michael Akpan</p>
       <p>&copy; <span id="year"></span> Ikot Ekpene Chamber of Commerce</p>
@@ -70,6 +77,11 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
+
+    // Optional: Hamburger toggle
+    document.getElementById("hamburger").addEventListener("click", () => {
+      document.getElementById("nav-menu").classList.toggle("open");
+    });
   </script>
 </body>
 </html>
