@@ -5,22 +5,29 @@
   padding: 0;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: system-ui, sans-serif;
   background: #8e6d6d;
-   overflow-x: hidden;
   line-height: 1.6;
   color: #fbfbfe;
   padding: 0 1rem;
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #890e09;
-  color: rgb(246, 237, 237);
+  color: #f6eded;
   padding: 1rem;
+  position: relative;
+  z-index: 999;
 }
 
 .logo {
@@ -33,6 +40,7 @@ header {
   display: block;
 }
 
+/* Navigation */
 .nav-menu {
   list-style: none;
   display: flex;
@@ -41,7 +49,7 @@ header {
 
 .nav-menu li a {
   text-decoration: none;
-  color: rgb(248, 241, 241);
+  color: #f8f1f1;
   font-weight: 500;
 }
 
@@ -50,6 +58,17 @@ header {
   text-decoration: underline;
 }
 
+/* Hamburger button */
+#menu-toggle {
+  display: none;
+  background: none;
+  font-size: 2rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Main layout */
 main.join-container {
   max-width: 1000px;
   margin: 0.5rem auto;
@@ -57,6 +76,7 @@ main.join-container {
   gap: 3rem;
 }
 
+/* Form */
 form fieldset {
   border: 1px solid #472f31;
   padding: 1rem;
@@ -72,6 +92,7 @@ form legend {
 
 form label {
   display: flex;
+  flex-direction: column;
   margin-bottom: 0.8rem;
 }
 
@@ -85,16 +106,18 @@ form textarea {
 
 form input[type="submit"] {
   background: #003366;
-  color: rgb(210, 108, 108);
+  color: #fff;
   border: none;
   padding: 0.8rem;
   cursor: pointer;
   margin-top: 1rem;
+  border-radius: 5px;
 }
 
+/* Membership cards */
 .membership-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
 }
 
@@ -104,6 +127,7 @@ form input[type="submit"] {
   border-radius: 10px;
   background: #ed7474;
   text-align: center;
+  max-width: 100%;
 }
 
 .card h3 {
@@ -113,25 +137,29 @@ form input[type="submit"] {
 
 .card button {
   margin-top: 1rem;
-  padding: -0rem 1rem;
+  padding: 0.6rem 1.2rem;
   background: #003366;
-  color: rgb(244, 239, 239);
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
+/* Modal */
 dialog {
-  border: flex;
+  border: none;
   padding: 2rem;
   max-width: 90%;
   border-radius: 8px;
+  background: #fff;
+  color: #000;
 }
 
 dialog::backdrop {
   background-color: rgba(50, 35, 35, 0.6);
 }
 
+/* Footer */
 footer {
   margin-top: 2rem;
   text-align: center;
@@ -140,21 +168,7 @@ footer {
   font-size: 0.9rem;
 }
 
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* Hamburger and responsive nav */
-#menu-toggle {
-  display: none;
-  background: none;
-  font-size: 2rem;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
+/* Responsive styles */
 @media (max-width: 768px) {
   main.join-container {
     flex-direction: column;
@@ -163,6 +177,11 @@ html, body {
 
   .membership-cards {
     grid-template-columns: 1fr;
+  }
+
+  .card {
+    max-width: 90%;
+    margin: 0 auto;
   }
 
   #menu-toggle {
@@ -191,12 +210,26 @@ html, body {
     padding: 0;
   }
 
-  .nav-menu li {
-    list-style: none;
-  }
-
   .nav-menu li a {
     font-size: 1.2rem;
     color: white;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .card button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  form input,
+  form select,
+  form textarea {
+    font-size: 1rem;
   }
 }
