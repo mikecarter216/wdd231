@@ -4,14 +4,11 @@
   margin: 0;
   padding: 0;
 }
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
 
 body {
   font-family: system-ui, sans-serif;
   background: #8e6d6d;
+   overflow-x: hidden;
   line-height: 1.6;
   color: #fbfbfe;
   padding: 0 1rem;
@@ -143,17 +140,12 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Fix layout on small screens */
-@media (max-width: 768px) {
-  main.join-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .membership-cards {
-    grid-template-columns: 1fr;
-  }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
+
+/* Hamburger and responsive nav */
 #menu-toggle {
   display: none;
   background: none;
@@ -164,6 +156,15 @@ footer {
 }
 
 @media (max-width: 768px) {
+  main.join-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .membership-cards {
+    grid-template-columns: 1fr;
+  }
+
   #menu-toggle {
     display: block;
   }
@@ -185,7 +186,17 @@ footer {
 
   .nav-menu {
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
-    text-align: center;
+    padding: 0;
+  }
+
+  .nav-menu li {
+    list-style: none;
+  }
+
+  .nav-menu li a {
+    font-size: 1.2rem;
+    color: white;
   }
 }
