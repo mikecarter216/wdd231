@@ -7,7 +7,8 @@
 }
 
 html, body {
-  max-width: 100%;
+  width: 100%;
+  max-width: 600%;
   overflow-x: hidden;
 }
 
@@ -247,4 +248,42 @@ form textarea {
   width: 100%;
   box-sizing: border-box;
   font-size: 1rem;
+}
+
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive nav toggle */
+#hamburger {
+  display: block;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav.open {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  #hamburger {
+    display: none;
+  }
+
+  nav {
+    display: flex !important;
+    flex-direction: row;
+  }
 }

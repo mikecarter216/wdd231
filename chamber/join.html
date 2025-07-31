@@ -9,15 +9,88 @@
   <link rel="stylesheet" href="styles/chamber.css">
   <link rel="stylesheet" href="styles/join.css">
   <script src="scripts/join.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      overflow-x: hidden;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      background: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      display: none;
+    }
+    nav ul.show {
+      display: flex;
+    }
+    nav ul li a, #mode-toggle {
+      color: white;
+      padding: 1rem;
+      display: block;
+      text-decoration: none;
+    }
+    #hamburger {
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: #333;
+      cursor: pointer;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      position: relative;
+    }
+    .join-container {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+    }
+    @media(min-width: 768px) {
+      nav ul {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: none;
+      }
+      #hamburger {
+        display: none;
+      }
+      .join-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById("hamburger");
+      const navList = document.querySelector("nav ul");
+
+      hamburger.addEventListener("click", () => {
+        navList.classList.toggle("show");
+      });
+    });
+  </script>
 </head>
 <body>
-   <header>
+  <header>
     <div class="logo">
       Ikot Ekpene <br><span>Chamber of Commerce</span>
     </div>
+    <button id="hamburger" aria-label="Toggle Menu">☰</button>
     <nav>
       <ul>
-        <li><a href="#" class="active">Home</a></li>
+        <li><a href="chamber.html" class="active">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Join</a></li>
         <li><a href="discover.html">Discover</a></li>
@@ -91,24 +164,24 @@
     <dialog id="modal-gold"><h4>Gold Benefits</h4><p>All benefits plus homepage promotion.</p><button class="close">Close</button></dialog>
   </main>
 
-   <footer>
+  <footer>
     <div class="footer-section left">
       <p><strong>Ikot Ekpene Chamber of Commerce</strong><br>
       123 Commerce Blvd, Ikot Ekpene, NG<br>
       info@ikotekpenecc.org | +234-800-555-0000</p>
     </div>
 
-  <div class="footer-section center socials">
-  <a href="https://www.youtube.com" aria-label="YouTube">
-    <img src="images/youtube.png" alt="YouTube" loading="lazy">
-  </a>
-  <a href="https://www.twitter.com" aria-label="Twitter">
-    <img src="images/twitter.png" alt="Twitter" loading="lazy">
-  </a>
-  <a href="https://www.linkedin.com" aria-label="LinkedIn">
-    <img src="images/linkedin.png" alt="LinkedIn" loading="lazy">
-  </a>
-</div>
+    <div class="footer-section center socials">
+      <a href="https://www.youtube.com" aria-label="YouTube">
+        <img src="images/youtube.png" alt="YouTube" loading="lazy">
+      </a>
+      <a href="https://www.twitter.com" aria-label="Twitter">
+        <img src="images/twitter.png" alt="Twitter" loading="lazy">
+      </a>
+      <a href="https://www.linkedin.com" aria-label="LinkedIn">
+        <img src="images/linkedin.png" alt="LinkedIn" loading="lazy">
+      </a>
+    </div>
 
     <div class="footer-section right">
       <p>WDD231 Class Project – Michael Akpan</p>
