@@ -1,76 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Discover | Ikot Ekpene Chamber of Commerce</title>
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/chamber.css">
-  <link rel="stylesheet" href="styles/discover.css">
-  <script src="scripts/discover.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 – Chamber of Commerce Project for Akwa Ibom">
+    <meta name="author" content="Michael Akpan">
+    <meta property="og:title" content="WDD 231 - Michael Akpan">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./images/favicon.png">
+    <meta property="og:url" content="https://mikecarter216.github.io/wdd231/directory.html">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/join-large.css">
+    <script src="./scripts/header.js" defer></script>
+    <script src="./scripts/hamburger.js" defer></script>
+    <script src="./scripts/discover.js" defer></script>
+    <script src="./scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/c21cfe5a09.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>WDD 231 - Michael Akpan</title>
 </head>
-
 <body>
-  <header>
-    <div class="logo">Ikot Ekpene <br><span>Chamber of Commerce</span></div>
-    <nav>
-      <ul>
-        <li><a href="chamber.html">Home</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
-        <li><a href="discover.html" class="active">Discover</a></li>
-        <li><button id="mode-toggle" aria-label="Toggle dark mode">🌓</button></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Visit Message -->
-    <aside id="visit-message" class="visit-message"></aside>
-
-    <!-- Page Title -->
-    <h1>Discover Ikot Ekpene</h1>
-
- <!-- Discover Cards -->
-<section class="discover-grid" id="discoverGrid">
-  <h2 class="section-title">Places to Discover</h2>
-  <!-- Cards will be injected here by discover.js -->
-</section>
-
-  </main>
-
-  <footer>
-    <div class="footer-section left">
-      <p><strong>Ikot Ekpene Chamber of Commerce</strong><br>
-        123 Commerce Blvd, Ikot Ekpene, NG<br>
-        info@ikotekpenecc.org | +234-800-555-0000
-      </p>
-    </div>
-
-     <div class="footer-section center socials">
-  <a href="https://www.youtube.com" aria-label="YouTube">
-    <img src="images/youtube.png" alt="YouTube" loading="lazy">
-  </a>
-  <a href="https://www.twitter.com" aria-label="Twitter">
-    <img src="images/twitter.png" alt="Twitter" loading="lazy">
-  </a>
-  <a href="https://www.linkedin.com" aria-label="LinkedIn">
-    <img src="images/linkedin.png" alt="LinkedIn" loading="lazy">
-  </a>
-</div>
-
-    <div class="footer-section right">
-      <p>WDD231 Class Project – Michael Akpan</p>
-      <p>&copy; <span id="year"></span> Ikot Ekpene Chamber of Commerce</p>
-      <p>Last Modification: <span id="lastModified"></span></p>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
-  </script>
+    <main>
+        <header id="header">
+            <div class="company-div">
+                <img src="./images/logo.png" alt="Logo of Chamber of Commerce" class="logo">
+                <div>
+                    <h6>Ikot Ekpene</h6>
+                    <p>Chamber of Commerce</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+            <img src="" alt="Profile of a user" class="user-profile">
+            <button id="hamburger-menu" aria-label="Toggle navigation">
+                <span class="hamburger-icon">&#9776;</span>
+            </button>
+        </header>
+        <section class="breadcrumb-section">
+            <h4>Discover</h4>
+        </section>
+        <section class="discover-container">
+            <div class="sidebar">
+                <h3>Demographics</h3>
+                <p>Akwa Ibom State has a population of over 5 million people, with Uyo as its capital.</p>
+                <h3>Economy</h3>
+                <p>The state is rich in oil and gas resources, agriculture, and growing tourism sector.</p>
+                <h3>Culture</h3>
+                <p>Home to diverse ethnic groups with rich cultural heritage and festivals.</p>
+            </div>
+            
+            <div class="gallery" id="attractions-gallery">
+                <!-- Cards will be inserted here by JavaScript -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <h6>Ikot Ekpene Chamber of Commerce</h6>
+            <ul>
+                <li>10 Ru De La Paix</li>
+                <li>Timbuktu, Mali 999</li>
+                <li>info@timbuktucc.org</li>
+                <li>(223) 55-2300</li>
+            </ul>
+        </div>
+        <div class="footer-socials">
+            <a href="#" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li>WDD231 Class Project</li>
+                <li>Michael Akpan</li>
+                <li>&copy; 
+                    <span id="currentyear"></span>
+                    Ikot Ekpene Chamber of Commerce
+                    <p id="lastModified"></p>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
-
 </html>

@@ -1,52 +1,50 @@
-{
-  "discover": [
+[
     {
-      "title": "Ikot Ekpene Plaza",
-      "image": "images/plaza.png",
-      "address": "Ikot Ekpene Plaza, Akwa Ibom State, Nigeria",
-      "description": "A bustling market hub and social center known for its unique raffia products."
+      "name": "Ibom Plaza",
+      "image": "images/ibom-plaza.webp",
+      "address": "Udo Udoma Ave, Uyo",
+      "description": "A beautiful shopping and entertainment complex in the heart of Uyo."
     },
     {
-      "title": "Green Park",
-      "image": "images/greenpark.png",
-      "address": "Green Park, Ikot Ekpene, Akwa Ibom",
-      "description": "A serene park with lush greenery, perfect for family picnics and leisure walks."
+      "name": "Godswill Akpabio Stadium",
+      "image": "images/stadium.webp",
+      "address": "Oron Road, Uyo",
+      "description": "State-of-the-art international stadium with 30,000 seating capacity."
     },
     {
-      "title": "Raffia City Mall",
-      "image": "images/mall.png",
-      "address": "Raffia City Mall, Ikot Ekpene",
-      "description": "Modern shopping center offering local and international brands."
+      "name": "Ibeno Beach",
+      "image": "images/ibeno-beach.webp",
+      "address": "Ibeno, Akwa Ibom",
+      "description": "Pristine sandy beach stretching over 30km along the Atlantic coast."
     },
     {
-      "title": "Unity Library",
-      "image": "images/library.png",
-      "address": "Unity Rd, Ikot Ekpene",
-      "description": "A public library with access to books, research materials, and Wi-Fi."
+      "name": "Ibom Tropicana",
+      "image": "images/tropicana.webp",
+      "address": "Oron Road, Uyo",
+      "description": "Entertainment complex featuring cinema, shopping mall, and amusement park."
     },
     {
-      "title": "Museum of Art",
-      "image": "images/museum.png",
-      "address": "Cultural Ave, Ikot Ekpene",
-      "description": "Preserving local history and heritage through exhibitions and artifacts."
+      "name": "National Museum",
+      "image": "images/museum.webp",
+      "address": "Ikot Ekpene Road, Uyo",
+      "description": "Showcasing the rich cultural heritage of Akwa Ibom and Nigeria."
     },
     {
-      "title": "Town Hall",
-      "image": "images/townhall.png",
-      "address": "Main Road, Ikot Ekpene",
-      "description": "A venue for community events, business meetings, and social programs."
+      "name": "Meridien Park",
+      "image": "images/meridien-park.webp",
+      "address": "Udo Udoma Ave, Uyo",
+      "description": "Beautiful green space perfect for relaxation and outdoor activities."
     },
     {
-      "title": "Fitness Trail",
-      "image": "images/fitness.png",
-      "address": "Wellness Loop, Ikot Ekpene",
-      "description": "Outdoor gym and jogging trail to promote health and wellness."
+      "name": "Akwa Ibom State University",
+      "image": "images/akwa-uni.webp",
+      "address": "Main Campus, Ikot Akpaden",
+      "description": "Premier state university with modern facilities and beautiful campus."
     },
     {
-      "title": "Raffia Monument",
-      "image": "images/monument.png",
-      "address": "Monument Circle, Ikot Ekpene",
-      "description": "Iconic sculpture representing the town's raffia weaving heritage."
+      "name": "Ibom Icon Hotel",
+      "image": "images/icon-hotel.webp",
+      "address": "Nwaniba Road, Uyo",
+      "description": "Luxury hotel with world-class amenities and conference facilities."
     }
-  ]
-}
+]

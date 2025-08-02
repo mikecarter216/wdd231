@@ -1,227 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join the Chamber</title>
-  <meta name="description" content="Join the Chamber of Commerce form page">
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/chamber.css">
-  <link rel="stylesheet" href="styles/join.css">
-  <script src="scripts/join.js" defer></script>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      overflow-x: hidden;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem;
-      background: #750404;
-      color: #fff;
-    }
-    #hamburger {
-      background: none;
-      border: none;
-      color: #ebe3e3;
-      cursor: pointer;
-    }
-    nav ul {
-      display: flex;
-      list-style: none;
-      padding: 0;
-    }
-    nav ul li {
-      margin-left: 1rem;
-    }
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-    }
-    .join-container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding: 1rem;
-    }
-    form, .membership-cards {
-      flex: 1 1 300px;
-      margin: 1rem;
-    }
-    .membership-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .card {
-      border: 1px solid #ccc;
-      padding: -0rem;
-      border-radius: 0.5rem;
-      text-align: center;
-      background-color: #e63737;
-    }
-    dialog {
-      padding: 1rem;
-      border: none;
-      border-radius: 0.5rem;
-    }
-    footer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding: 1rem;
-      background: #850808;
-      color: #fff;
-    }
-    .footer-section {
-      flex: 1 1 200px;
-      margin: 0.5rem;
-    }
-    .socials a img {
-      width: 30px;
-      margin-right: 10px;
-    }
-
-    @media (max-width: 768px) {
-      #hamburger {
-        display: block;
-      }
-      nav ul {
-        flex-direction: column;
-        display: none;
-        background: #333;
-        padding: 1rem;
-      }
-      nav ul.show {
-        display: flex;
-      }
-      .join-container {
-        flex-direction: column;
-      }
-    }
-  </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const hamburger = document.getElementById('hamburger');
-      const navList = document.querySelector('nav ul');
-      hamburger.addEventListener('click', () => {
-        navList.classList.toggle('show');
-      });
-    });
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 – Chamber of Commerce Project for Ikot Ekpene">
+    <meta name="author" content="Michael Akpan">
+    <meta property="og:title" content="WDD 231 - Michael Akpan">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./images/favicon.png">
+    <meta property="og:url" content="https://mikecarter216.github.io/wdd231/join.html">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/join-large.css">
+    <script src="./scripts/header.js" defer></script>
+    <script src="./scripts/hamburger.js" defer></script>
+    <script src="./scripts/getdates.js" defer></script>
+    <script src="./scripts/formModal.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/c21cfe5a09.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>WDD 231 - Michael Akpan</title>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      Ikot Ekpene <br><span>Chamber of Commerce</span>
-    </div>
-    <button id="hamburger" aria-label="Toggle Menu">☰</button>
-    <nav>
+    <main>
+        <header id="header">
+            <div class="company-div">
+                <img src="./images/logo.png" alt="Logo of Chamber of Commerce" class="logo">
+                <div>
+                    <h6>Ikot Ekpene</h6>
+                    <p>Chamber of Commerce</p>
+                </div>
+            </div>
+            <nav>
       <ul>
-        <li><a href="chamber.html" class="active">Home</a></li>
+       <li><a href="Chamber.html">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Join</a></li>
         <li><a href="discover.html">Discover</a></li>
         <li><button id="mode-toggle" aria-label="Toggle Dark Mode">🌓</button></li>
       </ul>
     </nav>
-  </header>
+            <img src="" alt="Profile of a user" class="user-profile">
+            <button id="hamburger-menu" aria-label="Toggle navigation">
+                <span class="hamburger-icon">&#9776;</span>
+            </button>
+        </header>
 
-  <main class="join-container">
-    <form method="get" action="thankyou.html">
-      <fieldset>
-        <legend>Membership Application</legend>
+        <section class="breadcrumb-section">
+            <h4>Join Us</h4>
+        </section>
+        
+        <section class="form-container">
+            <h4>Join Our Chamber of Commerce</h4>
+            <form action="thankyou.html" method="get">
+                <fieldset>
+                    <label for="first-name">First Name:
+                        <input type="text" id="first-name" name="first-name" required autocomplete="given-name" title="Enter your first name">
+                    </label>
 
-        <label>First Name <input type="text" name="fname" required></label>
-        <label>Last Name <input type="text" name="lname" required></label>
-        <label>Title <input type="text" name="title" pattern="[A-Za-z\s\-]{7,}"></label>
-        <label>Email <input type="email" name="email" required placeholder="you@example.com"></label>
-        <label>Phone <input type="tel" name="phone" required></label>
-        <label>Organization <input type="text" name="organization" required></label>
+                    <label for="last-name">Last Name:
+                        <input type="text" id="last-name" name="last-name" required autocomplete="family-name" title="Enter your last name">
+                    </label>
 
-        <label>Membership Level
-          <select name="membership" required>
-            <option value="np">NP Membership</option>
-            <option value="bronze">Bronze Membership</option>
-            <option value="silver">Silver Membership</option>
-            <option value="gold">Gold Membership</option>
-          </select>
-        </label>
+                    <label for="organization-title">Organizational Title:
+                        <input type="text" id="organization-title" name="organization-title" pattern="[A-Za-z-\s]{7,}" autocomplete="organization-title" title="Minimum 7 letters, only letters, hyphens, and spaces allowed">
+                    </label>
 
-        <label>Description
-          <textarea name="description" placeholder="Tell us about your organization"></textarea>
-        </label>
+                    <label for="email">Email Address:
+                        <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@email.com" title="Enter a valid email">
+                    </label>
 
-        <input type="hidden" name="timestamp" id="timestamp">
-        <input type="submit" value="Apply">
-      </fieldset>
-    </form>
+                    <label for="phone">Mobile Phone:
+                        <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Enter your mobile number">
+                    </label>
+                </fieldset>
 
-    <section class="membership-cards">
-      <h2>Membership Levels</h2>
+                <fieldset>
+                    <label for="business-name">Business Name:
+                        <input type="text" id="business-name" name="business-name" required autocomplete="organization" title="Enter your business name">
+                    </label>
 
-      <div class="card">
-        <h3>Non Profit</h3>
-        <p>Perfect for NGOs and charities.</p>
-        <button data-modal="modal-np">Learn More</button>
-      </div>
+                    <label for="membership">Membership Level:
+                        <select id="membership" name="membership">
+                            <option value="np">NP Membership (Free)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
 
-      <div class="card">
-        <h3>Bronze</h3>
-        <p>Basic benefits for small businesses.</p>
-        <button data-modal="modal-bronze">Learn More</button>
-      </div>
+                    <label for="description">Business Description:
+                        <textarea id="description" name="description" title="Describe your business"></textarea>
+                    </label>
 
-      <div class="card">
-        <h3>Silver</h3>
-        <p>Spotlight promotion and job board access.</p>
-        <button data-modal="modal-silver">Learn More</button>
-      </div>
+                    <input type="hidden" id="timestamp" name="timestamp">
 
-      <div class="card">
-        <h3>Gold</h3>
-        <p>VIP access and advertising credits.</p>
-        <button data-modal="modal-gold">Learn More</button>
-      </div>
-    </section>
+                    <button type="submit">Submit</button>
+                </fieldset>
 
-    <dialog id="modal-np"><h4>NP Benefits</h4><p>Free. Event and training access.</p><button class="close">Close</button></dialog>
-    <dialog id="modal-bronze"><h4>Bronze Benefits</h4><p>Directory listing, newsletter, event invites.</p><button class="close">Close</button></dialog>
-    <dialog id="modal-silver"><h4>Silver Benefits</h4><p>Discounts, job board, promotion slots.</p><button class="close">Close</button></dialog>
-    <dialog id="modal-gold"><h4>Gold Benefits</h4><p>All benefits plus homepage promotion.</p><button class="close">Close</button></dialog>
-  </main>
+                
+            </form>
+        </section>
 
-  <footer>
-    <div class="footer-section left">
-      <p><strong>Ikot Ekpene Chamber of Commerce</strong><br>
-      123 Commerce Blvd, Ikot Ekpene, NG<br>
-      info@ikotekpenecc.org | +234-800-555-0000</p>
-    </div>
+        <section class="membership-card-section">
+            <h4>Membership Levels</h4>
+            <div class="card-display">
+                <div class="card" onclick="openModal('np-modal')">
+                    <h3>NP Membership</h3>
+                    <p>Free membership for non-profits.</p>
+                    <button>More Info</button>
+                </div>
+                <div class="card" onclick="openModal('bronze-modal')">
+                    <h3>Bronze Membership</h3>
+                    <p>Basic benefits with event discounts.</p>
+                    <button>More Info</button>
+                </div>
+                <div class="card" onclick="openModal('silver-modal')">
+                    <h3>Silver Membership</h3>
+                    <p>Advertising and premium events.</p>
+                    <button>More Info</button>
+                </div>
+                <div class="card" onclick="openModal('gold-modal')">
+                    <h3>Gold Membership</h3>
+                    <p>All benefits, priority services.</p>
+                    <button>More Info</button>
+                </div>
+            </div>
+        </section>
 
-    <div class="footer-section center socials">
-      <a href="https://www.youtube.com" aria-label="YouTube">
-        <img src="images/youtube.png" alt="YouTube" loading="lazy">
-      </a>
-      <a href="https://www.twitter.com" aria-label="Twitter">
-        <img src="images/twitter.png" alt="Twitter" loading="lazy">
-      </a>
-      <a href="https://www.linkedin.com" aria-label="LinkedIn">
-        <img src="images/linkedin.png" alt="LinkedIn" loading="lazy">
-      </a>
-    </div>
+        <!-- Membership Level Modals -->
+        <dialog id="np-modal" hidden>
+            <h3>NP Membership</h3>
+            <p>Non-profits get free membership.</p>
+            <button onclick="closeModal('np-modal')">Close</button>
+        </dialog>
 
-    <div class="footer-section right">
-      <p>WDD231 Class Project – Michael Akpan</p>
-      <p>&copy; <span id="year"></span> Ikot Ekpene Chamber of Commerce</p>
-      <p>Last Modification: <span id="lastModified"></span></p>
-    </div>
-  </footer>
+        <dialog id="bronze-modal" hidden>
+            <h3>Bronze Membership</h3>
+            <p>Enjoy discounts on events.</p>
+            <button onclick="closeModal('bronze-modal')">Close</button>
+        </dialog>
+
+        <dialog id="silver-modal" hidden>
+            <h3>Silver Membership</h3>
+            <p>Includes advertising benefits.</p>
+            <button onclick="closeModal('silver-modal')">Close</button>
+        </dialog>
+
+        <dialog id="gold-modal" hidden>
+            <h3>Gold Membership</h3>
+            <p>All benefits, premium services.</p>
+            <button onclick="closeModal('gold-modal')">Close</button>
+        </dialog>
+        
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <h6>Akwa Ibom Chamber of Commerce</h6>
+            <ul>
+                <li>10 Ru De La Paix</li>
+                <li>Timbuktu, Mali 999</li>
+                <li>info@timbuktucc.org</li>
+                <li>(223) 55-2300</li>
+            </ul>
+        </div>
+        <div class="footer-socials">
+            <a href="#" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li>WDD231 Class Project</li>
+                <li>Michael Akpan</li>
+                <li>&copy; 
+                    <span id="currentyear"></span>
+                    Ikot Ekpene Chamber of Commerce
+                    <p id="lastModified"></p>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
