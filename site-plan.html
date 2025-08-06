@@ -14,7 +14,7 @@
       --primary-color: #004d99; /* Navy Blue for headings */
       --secondary-color: #ff9900; /* Orange for accents */
       --text-color: #333; /* Dark gray for body text */
-      --background-color: #f37373; /* Light gray for page background */
+      --background-color: #f37373; /* Light background */
     }
 
     body {
@@ -32,11 +32,6 @@
       color: var(--primary-color);
     }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
     section {
       background: rgb(173, 248, 173);
       padding: 20px;
@@ -44,21 +39,40 @@
       border-left: 6px solid var(--secondary-color);
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(202, 101, 101, 0.05);
+      text-align: left;
+    }
+
+    section ul {
+      padding-left: 20px;
     }
 
     strong {
       color: var(--secondary-color);
     }
 
+    /* Wireframes grid */
+    .wireframes-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .wireframes-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+      }
+    }
+
     .wireframes img {
       max-width: 100%;
-      border: 2px solid var(--primary-color);
-      border-radius: 6px;
-      margin: 10px 0;
+      border: 20px solid var(--primary-color);
+      border-radius: 100px;
+      margin-top: 20px;
     }
+
     .wireframes h3 {
       color: var(--primary-color);
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     footer {
@@ -67,6 +81,7 @@
       margin-top: 30px;
       font-size: 0.9em;
       color: #f5f5f5;
+      padding: 10px;
     }
   </style>
 </head>
@@ -91,30 +106,28 @@
   <section>
     <h2>Scenarios</h2>
     <ul>
-      <li>Which countries have the best eco-tourism activities?</li>
-      <li>Some of the top countries for eco-tourism include:
-
-Costa Rica – Famous for its rainforests, national parks, and biodiversity, offering zip-lining, wildlife tours, and sustainable lodges.
-
-New Zealand – Known for its pristine landscapes, hiking trails, and conservation-focused tourism.
-
-Norway – Offers fjord tours, glacier hikes, and eco-friendly cruises.
-
-Bhutan – Focuses on “high value, low impact” tourism with strong environmental preservation laws.
-
-Kenya – Provides ethical safari experiences that support wildlife conservation and local communities.</li>
-      <li>How can I find affordable, eco-friendly hotels in Europe?</li>
-      <li>To find affordable eco-friendly accommodations in Europe:
-
-Use booking platforms like EcoHotels.com, Bookdifferent.com, or Green Pearls that filter hotels by sustainability certifications.
-
-Check for Green Key, EU Ecolabel, or EarthCheck certifications, which indicate verified environmental standards.
-
-Travel off-season to get lower rates at sustainable hotels.
-
-Consider eco-hostels and locally-run guesthouses instead of large resorts.
-
-Use Google Maps with search terms like “eco-friendly hotel” or “sustainable accommodation” in your target city.</li>
+      <li>
+        <strong>Which countries have the best eco-tourism activities?</strong><br>
+        Some of the top countries for eco-tourism include:
+        <ul>
+          <li><strong>Costa Rica</strong> – Famous for its rainforests, national parks, and biodiversity, offering zip-lining, wildlife tours, and sustainable lodges.</li>
+          <li><strong>New Zealand</strong> – Known for its pristine landscapes, hiking trails, and conservation-focused tourism.</li>
+          <li><strong>Norway</strong> – Offers fjord tours, glacier hikes, and eco-friendly cruises.</li>
+          <li><strong>Bhutan</strong> – Focuses on “high value, low impact” tourism with strong environmental preservation laws.</li>
+          <li><strong>Kenya</strong> – Provides ethical safari experiences that support wildlife conservation and local communities.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>How can I find affordable, eco-friendly hotels in Europe?</strong><br>
+        To find affordable eco-friendly accommodations in Europe:
+        <ul>
+          <li>Use booking platforms like <em>EcoHotels.com</em>, <em>Bookdifferent.com</em>, or <em>Green Pearls</em> that filter hotels by sustainability certifications.</li>
+          <li>Check for <em>Green Key</em>, <em>EU Ecolabel</em>, or <em>EarthCheck</em> certifications, which indicate verified environmental standards.</li>
+          <li>Travel off-season to get lower rates at sustainable hotels.</li>
+          <li>Consider eco-hostels and locally-run guesthouses instead of large resorts.</li>
+          <li>Use Google Maps with search terms like “eco-friendly hotel” or “sustainable accommodation” in your target city.</li>
+        </ul>
+      </li>
     </ul>
   </section>
 
@@ -123,7 +136,7 @@ Use Google Maps with search terms like “eco-friendly hotel” or “sustainabl
     <h2>Color Scheme</h2>
     <p>Primary Color: <span style="color: var(--primary-color); font-weight: bold;">Navy Blue</span> — used for headings and important titles.</p>
     <p>Secondary Color: <span style="color: var(--secondary-color); font-weight: bold;">Orange</span> — used for accents, highlights, and buttons.</p>
-    <p>Background Color: Light gray for the overall page background.</p>
+    <p>Background Color: Light red/pink for the overall page background.</p>
   </section>
 
   <!-- Typography -->
@@ -137,11 +150,16 @@ Use Google Maps with search terms like “eco-friendly hotel” or “sustainabl
   <section class="wireframes">
     <h2>Wireframes</h2>
     <p>Below are placeholder sketches for the home page design:</p>
-    <h3>Mobile View</h3>
-    <img src="./images/ikotmart.png" alt="Mobile wireframe sketch placeholder">
-    
-    <h3>Desktop View</h3>
-    <img src="./images/carter.jpg" alt="Desktop wireframe sketch placeholder">
+    <div class="wireframes-grid">
+      <div>
+        <h3>Mobile View</h3>
+        <img src="./images/ikotmart.png" alt="Mobile wireframe sketch placeholder">
+      </div>
+      <div>
+        <h3>Desktop View</h3>
+        <img src="./images/carter.jpg" alt="Desktop wireframe sketch placeholder">
+      </div>
+    </div>
   </section>
 
   <footer>
