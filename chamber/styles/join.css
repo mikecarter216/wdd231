@@ -1,10 +1,9 @@
 @media screen and (max-width: 450px) {
-
     :root {
         --white: #fff;
         --p-background: #745332;
         --s-background: #4C5154;
-        --highlight: #F1C40F;
+        --highlight: #b8860b; /* Darker gold for better contrast */
         --black: #000;
         --ash: #d9d9d9;
     }
@@ -35,6 +34,7 @@
     header nav.open {
         display: flex; 
     }
+
     /* HAMBURGER MENU */
     #hamburger-menu {
         display: block; 
@@ -88,36 +88,36 @@
         left: 50%;
     }
 
+    /* DISCOVER PAGE */
     .gallery {
         grid-area: gallery;
         display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
     }
-    
     .sidebar {
         grid-area: sidebar;
     }
-    
     .discover-card {
         margin-bottom: 1rem;
     }
-    
     .discover-hero {
         text-align: center;
         padding: 1rem;
         background-color: #f0f0f0;
     }
-    
+
+    /* Visit message styling - Mobile */
     #visit-message {
-        background-color: #e8f4f8;
-        padding: 0.5rem;
-        margin: 1rem auto;
-        border-radius: 5px;
-        max-width: 600px;
+        background-color: var(--highlight);
+        color: var(--black);
+        padding: 0.8rem;
+        border-radius: 4px;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-weight: bold;
     }
 
-    /* DISCOVER PAGE */
     .discover-container {
         display: grid;
         grid-template-columns: 1fr;
@@ -136,25 +136,23 @@
         box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         transform: translateY(-5px);
     }
-    .discover-card:hover {
-        transform: none;
-    }
+    .discover-card:hover,
     .discover-card img:hover {
         transform: none;
     }
-
-
-    /* * {
-        outline: red solid 1px;
-    } */
 }
 
-/* Active nav link */
+/* ACTIVE NAV LINK - Mobile */
 header nav ul li a.active {
     color: var(--highlight);
+    text-decoration: underline;
+    background-color: rgba(0,0,0,0.1);
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 .sticky nav ul li a.active {
     color: var(--p-background);
+    background-color: rgba(255, 215, 0, 0.2);
 }
 
 /* Fix sidebar text contrast */

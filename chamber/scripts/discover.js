@@ -43,5 +43,5 @@ function displayVisitMessage() {
     localStorage.setItem('lastVisit', now.toString());
 }
 
-// Call the function when the page loads
-window.addEventListener('load', displayVisitMessage);
+// Run after DOM is ready
+document.addEventListener('DOMContentLoaded', displayVisitMessage);
