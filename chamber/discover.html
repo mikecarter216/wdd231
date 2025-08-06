@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="WDD 231 – Chamber of Commerce Project for Akwa Ibom">
@@ -36,7 +37,7 @@
                     <li><a href="chamber.html">Home</a></li>
                     <li><a href="directory.html">Directory</a></li>
                     <li><a href="join.html">Join</a></li>
-                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="discover.html" class="active">Discover</a></li>
                 </ul>
             </nav>
             <img src="" alt="Profile of a user" class="user-profile">
@@ -44,15 +45,22 @@
                 <span class="hamburger-icon">&#9776;</span>
             </button>
         </header>
+
         <section class="breadcrumb-section">
             <h4>Discover</h4>
         </section>
+
         <section class="discover-container">
             <div class="sidebar">
+                <!-- Visit message added -->
+                <div id="visit-message"></div>
+
                 <h3>Demographics</h3>
                 <p>Akwa Ibom State has a population of over 5 million people, with Uyo as its capital.</p>
+
                 <h3>Economy</h3>
                 <p>The state is rich in oil and gas resources, agriculture, and growing tourism sector.</p>
+
                 <h3>Culture</h3>
                 <p>Home to diverse ethnic groups with rich cultural heritage and festivals.</p>
             </div>
@@ -62,6 +70,7 @@
             </div>
         </section>
     </main>
+
     <footer>
         <div class="footer-left">
             <h6>Ikot Ekpene Chamber of Commerce</h6>

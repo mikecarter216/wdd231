@@ -18,7 +18,8 @@ fetch('./data/discover.json')
             `;
             gallery.appendChild(card);
         });
-    });
+    })
+    .catch(err => console.error('Error loading attractions:', err));
 
 // Visit tracking functionality
 function displayVisitMessage() {
