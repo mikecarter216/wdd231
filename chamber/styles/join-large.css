@@ -859,13 +859,6 @@ header nav ul li a.active {
     color: var(--white);
 }
 
-/* Responsive layout for small screens */
-@media (max-width: 640px) {
-    .discover-container {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* Mobile menu */
 @media (max-width: 768px) {
     #hamburger-menu {
