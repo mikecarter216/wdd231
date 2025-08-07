@@ -102,10 +102,10 @@ header ul li a:hover::after {
 }
 header .user-profile {
     width: 60px;
-    height: 60px;
+    height: 50px;
     object-fit: cover;
     border-radius: 50%;
-    display: none;
+    display: flex;
 }
 #hamburger-menu {
     display: flex; 
