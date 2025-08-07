@@ -108,7 +108,7 @@ header .user-profile {
     display: none;
 }
 #hamburger-menu {
-    display: none; 
+    display: flex; 
     background: none;
     border: none;
     color: inherit;

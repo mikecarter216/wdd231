@@ -1,13 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Hamburger toggle
+  // ✅ Hamburger toggle (fixed)
   const hamburger = document.getElementById('hamburger');
-  const nav = document.getElementById("nav");
+  const navList = document.querySelector('nav ul');
 
-  toggleBtn.addEventListener("click", () => {
-    nav.classList.toggle("show");
-  });
+  if (hamburger && navList) {
+    hamburger.addEventListener("click", () => {
+      navList.classList.toggle("open");
+    });
+  }
 
-  // Modal buttons
+  // ✅ Modal buttons
   document.querySelectorAll('button[data-modal]').forEach(btn => {
     const target = btn.getAttribute('data-modal');
     btn.addEventListener('click', () => {
@@ -21,10 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Timestamps
-  document.getElementById("timestamp").value = new Date().toISOString();
+  // ✅ Timestamps
+  const timestampInput = document.getElementById("timestamp");
+  if (timestampInput) {
+    timestampInput.value = new Date().toISOString();
+  }
 
-  // Footer date updates
-  document.getElementById("year").textContent = new Date().getFullYear();
-  document.getElementById("lastModified").textContent = document.lastModified;
+  // ✅ Footer date updates
+  const yearEl = document.getElementById("year");
+  const modifiedEl = document.getElementById("lastModified");
+
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  if (modifiedEl) modifiedEl.textContent = document.lastModified;
 });

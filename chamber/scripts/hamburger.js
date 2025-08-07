@@ -1,8 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const menuButton = document.getElementById('hamburger-menu');
-  const nav = document.querySelector('header nav');
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger-button");
+  const nav = document.getElementById("main-nav");
 
-  menuButton.addEventListener('click', () => {
-    nav.classList.toggle('open');
-  });
+  if (hamburger && nav) {
+    hamburger.addEventListener("click", () => {
+      nav.classList.toggle("open");
+    });
+  }
 });
