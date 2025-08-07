@@ -120,7 +120,7 @@ header .user-profile {
 .hero-section {
     height: 80dvh;
     width: 100%;
-    background-image: url(../images/commerce-hero-image.jpeg);
+    background-color: red;
     object-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -458,7 +458,7 @@ footer a:hover {
 .breadcrumb-section {
     height: 40dvh;
     width: 100%;
-    background-image: url(../images/commerce-hero-image.jpeg);
+    background-color:rgb(189, 5, 5);
     object-position: center;
     background-repeat: no-repeat;
     background-size: cover;
