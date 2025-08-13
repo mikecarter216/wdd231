@@ -19,7 +19,6 @@
       <button id="menu-toggle">☰</button>
       <ul id="nav-menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="vehicles.html">Vehicles</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -41,22 +40,34 @@
     </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Welcome to AutoFinder</h2>
-      <p>Find your dream car from our carefully curated selection of vehicles.</p>
-    </section>
-  </main>
+<main>
+  <section>
+    <h2>Welcome to AutoFinder</h2>
+    <p>Find your dream car from our carefully curated selection of vehicles.</p>
+  </section>
+
+  <!-- Vehicle list container (added) -->
+  <section>
+    <h2>Available Vehicles</h2>
+    <div id="vehicle-list" class="grid-container"></div>
+  </section>
+</main>
+
+<!-- Modal for vehicle details -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" id="modal-close">&times;</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
 
 <footer>
   <p>
     &copy; 2025 Michael Akpan |
     <a href="attributions.html">Attributions</a> |
-    <a href="https://www.loom.com/share/e708c8c782a74349990b8a2176283ece?sid=68e6ba22-9dce-4a09-bf5a-bb4427daea39" target="_blank">Video Demo</a>
+    <a href="https://www.loom.com/share/e708c8c782a74349990b8a2176283ece" target="_blank">Video Demo</a>
   </p>
   <p>Last Updated: <span id="lastModified"></span></p>
 </footer>
 
-  <script type="module" src="js/main.js"></script>
-</body>
-</html>
+<script type="module" src="js/main.js"></script>

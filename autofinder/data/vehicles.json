@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "make": "Mecedes",
-    "model": "benz",
+    "make": "Mercedes",
+    "model": "Benz",
     "year": 2020,
     "price": 24000,
     "image": "images/benz1.png",
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "make": "BMW",
-    "model": "clean",
+    "model": "Clean",
     "year": 2022,
     "price": 22000,
     "image": "images/bmw1.png",
@@ -19,11 +19,119 @@
   },
   {
     "id": 3,
-    "make": "Benza",
+    "make": "Mercedes",
     "model": "Model 3",
     "year": 2021,
     "price": 35000,
     "image": "images/benz2.png",
     "mileage": 8000
+  },
+  {
+    "id": 4,
+    "make": "Toyota",
+    "model": "Camry",
+    "year": 2019,
+    "price": 18000,
+    "image": "images/toyota.png",
+    "mileage": 45000
+  },
+  {
+    "id": 5,
+    "make": "Honda",
+    "model": "Accord",
+    "year": 2021,
+    "price": 20000,
+    "image": "images/honda-accord.png",
+    "mileage": 15000
+  },
+  {
+    "id": 6,
+    "make": "Tesla",
+    "model": "Model S",
+    "year": 2023,
+    "price": 75000,
+    "image": "images/tesla-model.png",
+    "mileage": 5000
+  },
+  {
+    "id": 7,
+    "make": "Ford",
+    "model": "Mustang",
+    "year": 2020,
+    "price": 32000,
+    "image": "images/ford-mustang.png",
+    "mileage": 25000
+  },
+  {
+    "id": 8,
+    "make": "Chevrolet",
+    "model": "Malibu",
+    "year": 2021,
+    "price": 21000,
+    "image": "images/lexus.png",
+    "mileage": 18000
+  },
+  {
+    "id": 9,
+    "make": "Audi",
+    "model": "A4",
+    "year": 2019,
+    "price": 27000,
+    "image": "images/audi.png",
+    "mileage": 40000
+  },
+  {
+    "id": 10,
+    "make": "Nissan",
+    "model": "Altima",
+    "year": 2022,
+    "price": 23000,
+    "image": "images/nissan.png",
+    "mileage": 10000
+  },
+  {
+    "id": 11,
+    "make": "Hyundai",
+    "model": "Sonata",
+    "year": 2021,
+    "price": 19500,
+    "image": "images/camry2.png",
+    "mileage": 17000
+  },
+  {
+    "id": 12,
+    "make": "Kia",
+    "model": "Optima",
+    "year": 2020,
+    "price": 18500,
+    "image": "images/camry1.png",
+    "mileage": 25000
+  },
+  {
+    "id": 13,
+    "make": "Lexus",
+    "model": "ES 350",
+    "year": 2023,
+    "price": 42000,
+    "image": "images/lexus.png",
+    "mileage": 4000
+  },
+  {
+    "id": 14,
+    "make": "Volkswagen",
+    "model": "Passat",
+    "year": 2019,
+    "price": 19000,
+    "image": "images/audi.png",
+    "mileage": 35000
+  },
+  {
+    "id": 15,
+    "make": "Subaru",
+    "model": "Outback",
+    "year": 2022,
+    "price": 28000,
+    "image": "images/bmw1.png",
+    "mileage": 12000
   }
 ]
