@@ -1,73 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AutoFinder - Explore and discover vehicles effortlessly">
-  <meta name="author" content="Michael Akpan">
-  <meta property="og:title" content="AutoFinder">
-  <meta property="og:description" content="Explore and discover vehicles effortlessly.">
-  <meta property="og:image" content="images/car1.jpg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AutoFinder - Explore and discover vehicles effortlessly" />
+  <meta name="author" content="Michael Akpan" />
+  <meta property="og:title" content="AutoFinder" />
+  <meta property="og:description" content="Explore and discover vehicles effortlessly." />
+  <meta property="og:image" content="images/car1.jpg" />
   <title>AutoFinder | Home</title>
-  <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header>
     <h1>AutoFinder</h1>
-    <nav>
-      <button id="menu-toggle">☰</button>
+
+    <nav id="main-nav" aria-label="Primary" role="navigation">
+      <button id="menu-toggle" type="button" aria-label="Toggle menu" aria-controls="nav-menu" aria-expanded="false">☰</button>
       <ul id="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-nav="index">Home</a></li>
+        <li><a href="about.html" data-nav="about">About</a></li>
+        <li><a href="contact.html" data-nav="contact">Contact</a></li>
       </ul>
     </nav>
-    <!-- 🔧 Changed section to div to avoid semantic error -->
-    <div class="card-container">
+
+    <!-- Image cards kept inside header as a hero gallery -->
+    <div class="card-container" aria-label="Featured vehicles">
       <div class="card-content">
-        <img src="./images/benz1.png" alt="car" class="flag">
+        <img src="./images/benz1.png" alt="Mercedes sedan front view" class="flag" loading="lazy" />
       </div>
       <div class="card-content">
-        <img src="./images/camry1.png" alt="luxury" class="flag">
+        <img src="./images/camry1.png" alt="Toyota Camry side view" class="flag" loading="lazy" />
       </div>
       <div class="card-content">
-        <img src="./images/camry2.png" alt="movement" class="flag">
+        <img src="./images/camry2.png" alt="Toyota interior view" class="flag" loading="lazy" />
       </div>
       <div class="card-content">
-        <img src="./images/camry3.png" alt="toyota" class="flag">
+        <img src="./images/camry3.png" alt="Toyota rear angle" class="flag" loading="lazy" />
       </div>
     </div>
   </header>
 
-<main>
-  <section>
-    <h2>Welcome to AutoFinder</h2>
-    <p>Find your dream car from our carefully curated selection of vehicles.</p>
-  </section>
+  <main>
+    <section>
+      <h2>Welcome to AutoFinder</h2>
+      <p>Find your dream car from our carefully curated selection of vehicles.</p>
+    </section>
 
-  <!-- Vehicle list container (added) -->
-  <section>
-    <h2>Available Vehicles</h2>
-    <div id="vehicle-list" class="grid-container"></div>
-  </section>
-</main>
+    <section aria-labelledby="avail-vehicles-heading">
+      <h2 id="avail-vehicles-heading">Available Vehicles</h2>
 
-<!-- Modal for vehicle details -->
-<div id="modal" class="modal hidden">
-  <div class="modal-content">
-    <span class="close" id="modal-close">&times;</span>
-    <div id="modal-body"></div>
+      <!-- optional quick filters to demonstrate array methods/DOM manipulation -->
+      <div class="toolbar" role="region" aria-label="Filters">
+        <label for="filter-make" class="visually-hidden">Filter by make</label>
+        <input id="filter-make" type="search" placeholder="Filter by make (e.g., Toyota)" inputmode="search" />
+        <button id="clear-filters" type="button">Clear</button>
+      </div>
+
+      <div id="vehicle-list" class="grid-container" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <!-- Modal for vehicle details -->
+  <div id="modal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button class="close" id="modal-close" type="button" aria-label="Close dialog">&times;</button>
+      <div id="modal-body"></div>
+    </div>
   </div>
-</div>
 
-<footer>
-  <p>
-    &copy; 2025 Michael Akpan |
-    <a href="attributions.html">Attributions</a> |
-    <a href="https://www.loom.com/share/e708c8c782a74349990b8a2176283ece" target="_blank">Video Demo</a>
-  </p>
-  <p>Last Updated: <span id="lastModified"></span></p>
-</footer>
+  <footer>
+    <p>
+      &copy; 2025 Michael Akpan |
+      <a href="attributions.html">Attributions</a> |
+      <a href="https://www.loom.com/share/e708c8c782a74349990b8a2176283ece" target="_blank" rel="noopener">Video Demo</a>
+    </p>
+    <p>Last Updated: <span id="lastModified"></span></p>
+  </footer>
 
-<script type="module" src="js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
