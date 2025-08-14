@@ -128,20 +128,20 @@ main h2 {
 }
 
 .certificate-card {
-  background-color: #740e0e;
-  padding: 1rem;
-  border-radius: 8px;
+  background-color: #fa3e3e;
+  padding: 2rem;
+  border-radius: 50px;
   text-align: center;
-  border: 2px solid #d6c6c6;
+  border: 7px solid #2908e8;
 }
 
 .certificate-card.completed {
-  border-color: #a20013;
-  background-color: #f5f9f8;
+  border-color: #1000a2;
+  background-color: #12eb6d;
 }
 
 .badge {
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   font-weight: bold;
   color: #084615;
 }
@@ -156,5 +156,5 @@ footer {
   background-color: #2004c1;
   color: white;
   text-align: center;
-  padding: 1.5rem;
+  padding: 5.5rem;
 }

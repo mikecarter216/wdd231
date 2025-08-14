@@ -8,14 +8,14 @@
   }
 
   #hamburger-menu {
-    display: none;
+    display: flex;
   }
 
   .course-work-grid {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .certificate-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
