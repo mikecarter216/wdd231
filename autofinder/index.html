@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AutoFinder - Explore and discover vehicles effortlessly" />
-  <meta name="author" content="Michael Akpan" />
-  <meta property="og:title" content="AutoFinder" />
-  <meta property="og:description" content="Explore and discover vehicles effortlessly." />
-  <meta property="og:image" content="images/car1.jpg" />
-  <title>AutoFinder | Home</title>
-  <link rel="icon" href="favicon.ico" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AutoFinder - Explore and discover vehicles effortlessly">
+  <meta name="author" content="Michael Akpan">
+  <meta property="og:title" content="AutoFinder">
+  <meta property="og:description" content="Explore and discover vehicles effortlessly.">
+  <meta property="og:image" content="images/car1.jpg">
+  <title>AutoFinder | Michael Akpan</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
     <h1>AutoFinder</h1>
 
-    <nav id="main-nav" aria-label="Primary" role="navigation">
+    <!-- Removed redundant role="navigation" -->
+    <nav id="main-nav" aria-label="Primary">
       <button id="menu-toggle" type="button" aria-label="Toggle menu" aria-controls="nav-menu" aria-expanded="false">☰</button>
       <ul id="nav-menu">
         <li><a href="index.html" data-nav="index">Home</a></li>
@@ -25,19 +26,20 @@
       </ul>
     </nav>
 
-    <!-- Image cards kept inside header as a hero gallery -->
-    <div class="card-container" aria-label="Featured vehicles">
+    <!-- Changed aria-label to aria-labelledby for better semantics -->
+    <div class="card-container" aria-labelledby="featured-vehicles-heading">
+      <h2 id="featured-vehicles-heading" class="visually-hidden">Featured Vehicles</h2>
       <div class="card-content">
-        <img src="./images/benz1.png" alt="Mercedes sedan front view" class="flag" loading="lazy" />
+        <img src="./images/benz1.png" alt="Mercedes sedan front view" class="flag" loading="lazy">
       </div>
       <div class="card-content">
-        <img src="./images/camry1.png" alt="Toyota Camry side view" class="flag" loading="lazy" />
+        <img src="./images/camry1.png" alt="Toyota Camry side view" class="flag" loading="lazy">
       </div>
       <div class="card-content">
-        <img src="./images/camry2.png" alt="Toyota interior view" class="flag" loading="lazy" />
+        <img src="./images/camry2.png" alt="Toyota interior view" class="flag" loading="lazy">
       </div>
       <div class="card-content">
-        <img src="./images/camry3.png" alt="Toyota rear angle" class="flag" loading="lazy" />
+        <img src="./images/camry3.png" alt="Toyota rear angle" class="flag" loading="lazy">
       </div>
     </div>
   </header>
@@ -51,10 +53,11 @@
     <section aria-labelledby="avail-vehicles-heading">
       <h2 id="avail-vehicles-heading">Available Vehicles</h2>
 
-      <!-- optional quick filters to demonstrate array methods/DOM manipulation -->
+      <!-- Quick filters -->
       <div class="toolbar" role="region" aria-label="Filters">
         <label for="filter-make" class="visually-hidden">Filter by make</label>
-        <input id="filter-make" type="search" placeholder="Filter by make (e.g., Toyota)" inputmode="search" />
+        <!-- Keep inputmode for mobile usability; it's just a warning -->
+        <input id="filter-make" type="search" placeholder="Filter by make (e.g., Toyota)" inputmode="search">
         <button id="clear-filters" type="button">Clear</button>
       </div>
 
@@ -66,6 +69,8 @@
   <div id="modal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal-content">
       <button class="close" id="modal-close" type="button" aria-label="Close dialog">&times;</button>
+      <!-- Added modal-title so aria-labelledby works -->
+      <h2 id="modal-title" class="visually-hidden">Vehicle Details</h2>
       <div id="modal-body"></div>
     </div>
   </div>
