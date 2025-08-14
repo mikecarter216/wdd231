@@ -1,10 +1,17 @@
 // Sample course data
 const courses = [
   { code: "WDD 130", title: "Web Fundamentals", type: "WDD", credits: 3, completed: true },
-  { code: "WDD 131", title: "Responsive Design", type: "WDD", credits: 3, completed: true },
+  { code: "WDD 131", title: "Dynamic Web Fundamentals", type: "WDD", credits: 3, completed: true },
   { code: "ITM 111", title: "Introduction to Databases", type: "WDD", credits: 3, completed: true },
   { code: "CSE 210", title: "Programming with Classes", type: "CSE", credits: 3, completed: true },
-  { code: "CSE 110", title: "Programming with Function", type: "CSE", credits: 2, completed: true }
+  { code: "CSE 110", title: "Programming with Function", type: "CSE", credits: 2, completed: true },
+  { code: "CSE 341", title: "Web Service", type: "CSE", credits: 3, completed: true },
+  { code: "CSE 340", title: "Web Backend Development", type: "CSE", credits: 3, completed: true },
+  { code: "WDD 231", title: "Web Frontend Developmet", type: "WDD", credits: 3, completed: true },
+  {code: "WDD 330", title: "Web Frontend Development II", type: "WDD", credits: 3, completed: false },
+  { code: "CSE 212", title: "Programming with Data Structure", type: "CSE", credits: 2, completed: false },
+  { code: "CSE 111", title: "Programming with Functions", type: "CSE", credits: 2, completed: true },
+  { code: "GS 170", title: "Career Development", type: "WDD", credits: 2, completed: true },
 ];
 
 // DOM Elements
